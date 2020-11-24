@@ -33,6 +33,13 @@ QuestaoDia.associate = (models) => {
         },
         as: 'aluno'
     })
+
+    QuestaoDia.belongsTo(models.questao, {
+        foreignKey: {
+            name: 'id_questao'
+        },
+        as: 'questao'
+    })
 }
 
 module.exports = QuestaoDia;
