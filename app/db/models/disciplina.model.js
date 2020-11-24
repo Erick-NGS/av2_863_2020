@@ -4,7 +4,10 @@ const name = require('path').basename(__filename.replace('.model', ''), '.js');
 
 const Disciplina = sequelize.define(name, {
     nome: {
-        type: DataTypes.STRING(50)
+        type: DataTypes.STRING(100)
+    },
+    codigo: {
+        type: DataTypes.STRING(6)
     },
     createdAt: {
         type: DataTypes.DATE,

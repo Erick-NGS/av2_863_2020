@@ -6,6 +6,16 @@ const AtividadeAvaliativa = sequelize.define(name, {
     descricao: {
         type: DataTypes.TEXT
     },
+    qtdIntegrantes: {
+        type: DataTypes.STRING(2)
+    },
+    pontuacao: {
+        type: DataTypes.STRING(4)
+    },
+    ativo: {
+        type: DataTypes.BOOLEAN,
+        defaultValue:true,
+    },
     createdAt: {
         type: DataTypes.DATE,
         field: 'Criado_em'
@@ -32,6 +42,13 @@ AtividadeAvaliativa.associate = (models) => {
             name: 'id_atividadeavaliativa'
         },
         as:'grupos'
+    })
+
+    AtividadeAvaliativa.hasMany(models.avaliacao360, {
+        foreignKey: {
+            name: 'id_atividadeavaliativa'
+        },
+        as:'avaliacoes'
     })
 }
 
