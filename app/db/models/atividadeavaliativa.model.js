@@ -50,6 +50,15 @@ AtividadeAvaliativa.associate = (models) => {
         },
         as:'avaliacoes360'
     })
+
+    AtividadeAvaliativa.belongsToMany(models.hardskill, {
+        through: 'atividadeavaliativa_hardskill',
+        timestamps:false,
+        foreignKey: {
+            name: 'id_atividadeavaliativa'
+        },
+        as: 'hardskills'
+    })
 }
 
 

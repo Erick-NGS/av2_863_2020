@@ -46,6 +46,15 @@ HardSkill.associate = (models) => {
         },
         as: 'turmas'
     })
+
+    HardSkill.belongsToMany(models.atividadeavaliativa, {
+        through: 'atividadeavaliativa_hardskill',
+        timestamps: false,
+        foreignKey: {
+            name: 'id_hardskill'
+        },
+        as: 'atividadesavaliativas'
+    })
 }
 
 
