@@ -26,6 +26,13 @@ Questao.associate = (models) => {
         },
         as: 'usuario'
     })
+
+        Questao.belongsTo(models.hardskill, {
+            foreignKey: {
+                name: 'id_hardskill'
+            },
+            as: 'hardskill'
+        })
 }
 
 module.exports = Questao;

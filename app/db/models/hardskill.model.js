@@ -55,6 +55,13 @@ HardSkill.associate = (models) => {
         },
         as: 'atividadesavaliativas'
     })
+
+    HardSkill.hasMany(models.questao, {
+        foreignKey: {
+            name: 'id_hardskill'
+        },
+        as:'questoes'
+    })
 }
 
 
