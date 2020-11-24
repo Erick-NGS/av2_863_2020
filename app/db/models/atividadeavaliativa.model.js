@@ -48,7 +48,7 @@ AtividadeAvaliativa.associate = (models) => {
         foreignKey: {
             name: 'id_atividadeavaliativa'
         },
-        as:'avaliacoes'
+        as:'avaliacoes360'
     })
 }
 

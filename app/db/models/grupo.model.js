@@ -29,6 +29,13 @@ Grupo.associate = (models) => {
         },
         as: 'atividadeavaliativa'
     })
+
+    Grupo.hasMany(models.avaliacao360, {
+        foreignKey: {
+            name: 'id_grupo'
+        },
+        as:'avaliacoes360'
+    })
 }
 
 

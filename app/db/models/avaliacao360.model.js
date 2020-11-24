@@ -27,11 +27,11 @@ Avaliacao360.associate = (models) => {
         as: 'atividadeavaliativa'
     })
 
-    Avaliacao360.hasMany(models.grupo, {
+    Avaliacao360.belongsTo(models.grupo, {
         foreignKey: {
-            name: 'id_Avaliacao360'
+            name: 'id_grupo'
         },
-        as:'grupos'
+        as:'grupo'
     })
 }
 
