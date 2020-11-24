@@ -43,6 +43,13 @@ Aluno.associate = (models) => {
         },
         as: 'curso'
     })
+
+    Aluno.hasMany(models.questaodia, {
+        foreignKey: {
+            name: 'id_aluno'
+        },
+        as:'questoesdia'
+    })
 }
 
 module.exports = Aluno;
