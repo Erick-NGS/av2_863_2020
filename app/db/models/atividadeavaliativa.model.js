@@ -37,3 +37,4 @@ AtividadeAvaliativa.associate = (models) => {
 
 
 module.exports = AtividadeAvaliativa;
+
