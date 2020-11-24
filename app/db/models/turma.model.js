@@ -62,6 +62,20 @@ Turma.associate = (models) => {
         },
         as: 'hardskills'
     })
+
+    Turma.hasMany(models.atividadeavaliativa, {
+        foreignKey: {
+            name: 'id_turma'
+        },
+        as:'atividadesavaliativas'
+    })
+
+    Turma.hasMany(models.grupo, {
+        foreignKey: {
+            name: 'id_turma'
+        },
+        as:'grupos'
+    })
 }
 
 
