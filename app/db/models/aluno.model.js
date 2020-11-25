@@ -50,6 +50,15 @@ Aluno.associate = (models) => {
         },
         as:'questoesdia'
     })
+
+    Aluno.belongsToMany(models.softskill, {
+        through: 'aluno_softskill',
+        timestamps:false,
+        foreignKey: {
+            name: 'id_aluno'
+        },
+        as: 'softskills'
+    })
 }
 
 module.exports = Aluno;
