@@ -6,13 +6,6 @@ const QuestaoDia = sequelize.define(name,{
     descricao: {
         type: DataTypes.TEXT
     },
-    resposta: {
-        type: DataTypes.TEXT
-    },
-    correta: {
-        type: DataTypes.BOOLEAN,
-        defaultValue:false,
-    },
     createdAt: {
         type: DataTypes.DATE,
         field: 'Criado_em'
