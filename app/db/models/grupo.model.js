@@ -44,6 +44,15 @@ Grupo.associate = (models) => {
         as:'tarefas'
     })
 
+    Grupo.belongsToMany(models.aluno, {
+        through: 'aluno_grupo',
+        timestamps:false,
+        foreignKey: {
+            name: 'id_grupo'
+        },
+        as: 'alunos'
+    })
+
 }
 
 

@@ -74,6 +74,15 @@ Aluno.associate = (models) => {
         as:'avaliacoes360'
     })
 
+    Aluno.belongsToMany(models.grupo, {
+        through: 'aluno_grupo',
+        timestamps:false,
+        foreignKey: {
+            name: 'id_aluno'
+        },
+        as: 'grupos'
+    })
+
 }
 
 module.exports = Aluno;
