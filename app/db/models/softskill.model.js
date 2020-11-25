@@ -24,12 +24,20 @@ SoftSkill.associate = (models) => {
         through: 'aluno_softskill',
         timestamps: false,
         foreignKey: {
-            name: 'id_Softskill'
+            name: 'id_softskill'
         },
         as: 'alunos'
     })
 
-    
+    SoftSkill.belongsToMany(models.avaliacao360, {
+        through: 'avaliacao360_softskill',
+        timestamps: false,
+        foreignKey: {
+            name: 'id_softskill'
+        },
+        as: 'avaliacoes360'
+    })
+
 }
 
 

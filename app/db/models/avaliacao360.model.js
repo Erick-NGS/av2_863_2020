@@ -33,6 +33,15 @@ Avaliacao360.associate = (models) => {
         },
         as:'grupo'
     })
+
+    Avaliacao360.belongsToMany(models.softskill, {
+        through: 'avaliacao360_softskill',
+        timestamps:false,
+        foreignKey: {
+            name: 'id_avaliacao360'
+        },
+        as: 'softskills'
+    })
 }
 
 
