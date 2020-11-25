@@ -67,6 +67,13 @@ Aluno.associate = (models) => {
         as:'tarefas'
     })
 
+    Aluno.hasMany(models.avaliacao360, {
+        foreignKey: {
+            name: 'id_aluno'
+        },
+        as:'avaliacoes360'
+    })
+
 }
 
 module.exports = Aluno;

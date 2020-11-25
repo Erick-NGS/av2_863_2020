@@ -42,6 +42,14 @@ Avaliacao360.associate = (models) => {
         },
         as: 'softskills'
     })
+
+    Avaliacao360.belongsTo(models.aluno, {
+        foreignKey: {
+            name: 'id_aluno'
+        },
+        as:'aluno'
+    })
+
 }
 
 
